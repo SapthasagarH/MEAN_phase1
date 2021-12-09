@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    
+    <div class="bg-image" style="background-image: url(https://wallpapercave.com/wp/wp4004529.jpg); background-repeat: no-repeat; background-size: auto;">
+        <div class="container">
+            <div class="page-header">
+                <h1 style="text-align: center; color: dodgerblue; font-family: serif;"><b>Guardians Of The Sky</b></h1>
+                <p class="text-warning" style="text-align-last:center;">The Indian Air Force - Touch The Sky With Glory</p>
+            </div>
+        </div>
+    </div>
+    
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="https://indianairforce.nic.in/" target="_blank" style="color: coral;">Official Airforce website</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="C:\Users\hsapthasagar\OneDrive - ZeOmega\Desktop\project\about.html">About</a></li>
+                <li><a href="C:\Users\hsapthasagar\OneDrive - ZeOmega\Desktop\project\contact.html">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="C:\Users\hsapthasagar\OneDrive - ZeOmega\Desktop\project\postarticle.html" target="_blank"><span class="glyphicon glyphicon-log-in"></span><b style="color: chartreuse;">   Post Article</b></a></li>
+            </ul>
+        </div>
+    </nav>
+    
+      
+    <div class="container-fluid">
+        <p style="background-color:dimgray; color: ghostwhite;"><b><i>Some of the articles related to Indian Air Force</i></b></p>
+        <div class="row">
+            <div class="col-sm-4" style="background-color:lavender;">
+                <h2 style="color: midnightblue;"><b>Indian Air Force deploys first Rafales in East to counter China</b></h2><br>
+                <img src="https://d3lcr32v2pp4l1.cloudfront.net/Pictures/380x253/0/3/8/72038_rafaledeparts_597709.jpg" alt="article1">
+                <p style="color: midnightblue;">The Indian Air Force (IAF) Air Chief Marshal Rakesh Kumar Singh Bhadauria formally inducted Rafale fighters into Number 101 Squadron, at Air Force Station Hasimara, in Eastern Air Command.<br>With barely four fighter squadrons based in the eastern sector to counter the threat from China, the second Rafale squadron will come as a boost to the IAF.</p>
+            </div>
+            <div class="col-sm-4" style="background-color:lavenderblush;">
+                <h2 style="color:purple"><b>Boeing finishes deliveries of AH-64E and CH-47F to Indian air force</b></h2><br>
+                <img src="https://d3lcr32v2pp4l1.cloudfront.net/Pictures/380x253/4/8/6/71486_boeingah64eapache_306466.jpeg" alt="article2">
+                <p style="color:purple">The United States (US) manufacturer Boing delivered the final five of 22 Apaches ordered by India in June, it says. The remaining five of 15 Chinooks ch-47 ordered by the Indian Air Force were delivered in March 2020.<br> Boeing now eyes requirements for nearly 200 fighters including (helicopters and jets) from the Indian Air Force and Indian Navy.</p>
+            </div>
+            
+            <div class="col-sm-4" style="background-color:lightcyan;">
+                <h2 style="color: rgb(15, 66, 15);"><b>Indian Air Force’s LCA Tejas to get facelift with French HAMMER missiles</b></h2><br>
+                <img src="https://d3lcr32v2pp4l1.cloudfront.net/Pictures/380x253/3/3/6/70336_foclca2_161786.jpeg" alt="article3">
+                <p>Indian Air Force has placed orders for French-made HAMMER missiles that would further bolster the capabilities of the indigenous Light Combat Aircraft (LCA) Tejas.The new installation will help the fighter aircraft take out ground targets and hardened bunkers at stand-off ranges of over 70 kilometres.<br>The development comes at a time when India embroiled with China along the LAC</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row" id="prnt"></div>
+    </div>        
+
+    <footer style="background-color: black; color: chartreuse;">
+        <p class="fa fa-instagram"></p> @ mr_seven_oceans<br>
+        <small>&copy; Copyright 2021, My Blogging email: hsapthasagar@zeomega.com</small>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        var user = JSON.parse(localStorage.getItem('user'));
+        console.log(user);
+        const container = document.getElementById("prnt")
+        let new_blog;
+        for (var keys in user) {
+          var obj = user[keys];
+          console.log(obj)
+          new_blog = `<div style="background-color:dimgray; color:black ;margin-top:10px;border: 1px solid black;" >
+              <h5 style="text-align:left; padding:5px;"><strong>Author Name:</strong><br>${keys}</h5>
+              <p style="text-align:left; padding-left:5px;"><strong>Article Description:<br></strong>${obj}</p>
+              </div> `;
+          container.innerHTML += new_blog;
+        }
+        var resetValue =""; 
+        localStorage.setItem("user", resetValue);
+      </script>
+</body>
+</html>
